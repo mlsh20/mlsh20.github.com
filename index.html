@@ -74,7 +74,7 @@ var chart = function () {
 	  .append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.csv("IKDD_HW10_1.csv", function(error, data) {
+	d3.csv("Hw10_data.csv", function(error, data) {
 	  var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "date"; });
 	  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
@@ -191,7 +191,7 @@ var difference = function () {
 	  .append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.csv("IKDD_HW10_2.csv", function(error, data) {
+	d3.csv("Hw10_data2.csv", function(error, data) {
 	  var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "date"; });
 	  data.forEach(function(d) {
 		d.date = parseDate(d.date);
